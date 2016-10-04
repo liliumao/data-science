@@ -17,13 +17,6 @@ from datetime import datetime
 Introduction:
     Command-line application for youtube crawler.
 
-Basic data query:
-    Put in a url and raw data file, the program will output a full filled excel file,
-csv archive data file and url file with new urls appended.
-
-Weekly subscribe query:
-    Put in a accumulated url file, output a csv file with the new data in the first line.
-
 For more information, see the README.md .
 """
 
@@ -78,6 +71,7 @@ class Info_Spider(object):
                 addrs = driver.find_elements_by_xpath(("//div[contains(@class, 'secondary-attributes')]/address"))
                 for addr in addrs:
                     code = addr.text.split(" ")
+                    self.__addrs.append(addr[-1])
 
                 next_page = driver.find_elements_by_class_name("available-number pagination-links_anchor")
                 has_next = False
@@ -92,17 +86,14 @@ class Info_Spider(object):
                 else:
                     driver.get(next_url)
 
-    def save_csv(self):
-        # name new file with current date
-        date = datetime.now().strftime("%Y-%m-%d")
-        csvfile = file(date+".csv", 'wb')
+    def save_csv(self, name):
+        # name new file with current data
+        csvfile = file(name + ".csv", 'wb')
         writer = csv.writer(csvfile)
         data = []
-        for i in range(len(self.__start_url)):
-            line = (self.__channel_name[i], self.__country[i],
-                    self.__plat_attr[i], self.__mail[i], self.__subscribe[i],
-                    self.__num_view[i]/float(NUM_VIDEO_TO_COUNT), self.__num_up[i]/float(NUM_VIDEO_TO_COUNT),
-                    self.__num_down[i]/float(NUM_VIDEO_TO_COUNT), self.__num_comment[i]/float(NUM_VIDEO_TO_COUNT))
+        for i in range(len(self.__names)):
+            line = (self.__names[i], self.__addrs[i], self.__phones[i],
+                    self.__stars[i], self.__money[i], self.__reviews[i])
             data.append(line)
 
         writer.writerows(data)
