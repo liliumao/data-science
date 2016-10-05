@@ -39,7 +39,53 @@ class Info_Spider(object):
         self.__addrs = []
         self.__phones = []
 
-    def crawl(self):
+        for line in open(filename):
+            self.__start_url.append(line)
+
+    def advisor_crawl(self):
+        driver = webdriver.Chrome()
+        for url in self.__start_url:
+            driver.get(url)
+
+            for i in xrange(i, NUM_TO_COUNT/2 + 1):
+                shops = diver.find_elements_by_class_name("property_title")
+                for shop in shops:
+                    self.__names.append(shop.text)
+                    d_url = shop.get_attribute("href")
+                    driver.get(d_url)
+                    star = driver.find_elements_by_class_name("sprite-rating_rr_fill rating_rr_fill")
+                    self.__stars.append(star[0].get_attribute("content"))
+
+                    price = driver.find_elements_by_class_name("detail first price_rating separator")
+                    self.__money.append(price[0].text)
+
+                    review = driver.find_elements_by_xpath("//div[contains(@class, 'rs rating')]/a")
+                    self.__reviews.append(review[0].get_attribute("content"))
+
+                    addr = driver.find_elements_by_class_name("postalCode")
+                    self.__addrs.append(addr[0].text)
+
+                    phone = driver.find_elements_by_class_name("fl phoneNumber")
+                    self.__phones.append(phone[0].text)
+
+                    driver.back()
+
+                next_page = driver.find_elements_by_class_name("pageNum taLnk")
+                has_next = False
+                next_url = ""
+                for j in xrange(len(next_page)):
+                    if i + 1 == int(next_page[j].text):
+                        next_url = next_page[j].get_attribute('href')
+                        has_next = True
+                        break
+                if not has_next:
+                    break
+                else:
+                    driver.get(next_url)
+
+                self.save_csv("yelp")
+
+    def yelp_crawl(self):
         driver = webdriver.Chrome()
         for url in self.__start_url:
             driver.get(url)
@@ -50,7 +96,7 @@ class Info_Spider(object):
                 for name in names:
                     self.__names.append(name.text)
 
-                stars = driver.find_elements_by_class_name("star-img")
+                stars = drive.find_elements_by_class_name("star-img")
                 for star in stars:
                     star_s = star.split(" ")
                     self.__stars.append(start_s[0])
@@ -86,6 +132,8 @@ class Info_Spider(object):
                 else:
                     driver.get(next_url)
 
+                self.save_csv("yelp")
+
     def save_csv(self, name):
         # name new file with current data
         csvfile = file(name + ".csv", 'wb')
@@ -106,11 +154,13 @@ def change_num_type(ori_num):
 
 def main(args):
 
-    crawl_info = args.website
+    crawl_yelp = args.website
 
-    if crawl_info:
-        spidey = Info_Spider(args.filename)
-        spidey.crawl()
+    if crawl_yelp:
+        spidey = Info_Spider(url_file)
+        spidey.yelp_crawl()
+    else:
+        spidey = Info_Spider(url_file)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
