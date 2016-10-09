@@ -41,36 +41,36 @@ class Info_Spider(object):
 
         for line in open(filename):
             self.__start_url.append(line)
-
     def advisor_crawl(self):
         driver = webdriver.Chrome()
         for url in self.__start_url:
             driver.get(url)
 
-            for i in xrange(i, NUM_TO_COUNT/2 + 1):
-                shops = diver.find_elements_by_class_name("property_title")
-                for shop in shops:
-                    self.__names.append(shop.text)
-                    d_url = shop.get_attribute("href")
+            for i in xrange(1, NUM_TO_COUNT/2 + 1):
+                shops = driver.find_elements_by_class_name("property_title")
+                for j in xrange(len(shops)):
+                    self.__names.append(shops[j].text)
+                    d_url = shops[j].get_attribute("href")
                     driver.get(d_url)
-                    star = driver.find_elements_by_class_name("sprite-rating_rr_fill rating_rr_fill")
+                    star = driver.find_elements_by_xpath("//img[contains(@class, 'sprite-rating_rr_fill rating_rr_fill')]")
                     self.__stars.append(star[0].get_attribute("content"))
 
-                    price = driver.find_elements_by_class_name("detail first price_rating separator")
+                    price = driver.find_elements_by_xpath("//div[contains(@class, 'detail first price_rating separator')]")
                     self.__money.append(price[0].text)
 
                     review = driver.find_elements_by_xpath("//div[contains(@class, 'rs rating')]/a")
                     self.__reviews.append(review[0].get_attribute("content"))
 
-                    addr = driver.find_elements_by_class_name("postalCode")
+                    addr = driver.find_elements_by_xpath("//span[contains(@property, 'postalCode')]")
                     self.__addrs.append(addr[0].text)
 
-                    phone = driver.find_elements_by_class_name("fl phoneNumber")
+                    phone = driver.find_elements_by_xpath("//div[contains(@class, 'fl phoneNumber')]")
                     self.__phones.append(phone[0].text)
 
                     driver.back()
+                    shops = driver.find_elements_by_class_name("property_title")
 
-                next_page = driver.find_elements_by_class_name("pageNum taLnk")
+                next_page = driver.find_elements_by_xpath("//a[contains(@class, 'pageNum taLnk')]")
                 has_next = False
                 next_url = ""
                 for j in xrange(len(next_page)):
@@ -83,14 +83,14 @@ class Info_Spider(object):
                 else:
                     driver.get(next_url)
 
-                self.save_csv("yelp")
+        self.save_csv("advisor")
 
     def yelp_crawl(self):
         driver = webdriver.Chrome()
         for url in self.__start_url:
             driver.get(url)
 
-            for i in xrange(i, NUM_TO_COUNT + 1):
+            for i in xrange(1, NUM_TO_COUNT + 1):
                 # shops = driver.find_elements_by_class_name("biz-name js-analytics-click")
                 names = driver.find_elements_by_xpath("//a[contains(@class, 'biz-name js-analytics-click')]/span")
                 for name in names:
@@ -154,7 +154,8 @@ def change_num_type(ori_num):
 
 def main(args):
 
-    crawl_yelp = args.website
+    crawl_yelp = args.yelp
+    url_file = args.urls
 
     if crawl_yelp:
         spidey = Info_Spider(url_file)
@@ -166,9 +167,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument('--website',
+    parser.add_argument('--urls',
                         help='File containing urls to crawl.',
                         type=str,
+                        default='')
+    parser.add_argument('--yelp',
+                        help='Crawl yelp.',
+                        type=bool,
                         default='')
 
     args = parser.parse_args()
