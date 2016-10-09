@@ -91,35 +91,37 @@ class Info_Spider(object):
             driver.get(url)
 
             for i in xrange(1, NUM_TO_COUNT + 1):
-                # shops = driver.find_elements_by_class_name("biz-name js-analytics-click")
-                names = driver.find_elements_by_xpath("//a[contains(@class, 'biz-name js-analytics-click')]/span")
-                for name in names:
-                    self.__names.append(name.text)
+                divs = driver.find_elements_by_class_name("biz-listing-large")
+                for div in divs:
+                    # shops = driver.find_elements_by_class_name("biz-name js-analytics-click")
+                    names = div.find_elements_by_xpath(".//a[contains(@class, 'biz-name js-analytics-click')]/span")
+                    for name in names:
+                        self.__names.append(name.text)
 
-                stars = drive.find_elements_by_class_name("star-img")
-                for star in stars:
-                    star_s = star.split(" ")
-                    self.__stars.append(start_s[0])
+                    stars = div.find_elements_by_class_name("star-img")
+                    for star in stars:
+                        star_s = star.get_attribute("title").split(" ")
+                        self.__stars.append(star_s[0])
 
-                reviews = driver.find_elements_by_class_name("biz-name js-analytics-click")
-                for review in reviews:
-                    review_s = review.text.split(" ")
-                    self.__reviews.append(review_s[0])
+                    reviews = div.find_elements_by_xpath(".//span[contains(@class, 'review-count rating-qualifier')]")
+                    for review in reviews:
+                        review_s = review.text.split(" ")
+                        self.__reviews.append(review_s[0])
 
-                prices = driver.find_elements_by_class_name("business-attribute price-range")
-                for price in prices:
-                    self.__money.append(price.text)
+                    prices = div.find_elements_by_xpath(".//span[contains(@class, 'business-attribute price-range')]")
+                    for price in prices:
+                        self.__money.append(price.text)
 
-                phones = driver.find_elements_by_class_name("biz-phone")
-                for phone in phones:
-                    self.__phones.append(phone.text)
+                    phones = div.find_elements_by_class_name("biz-phone")
+                    for phone in phones:
+                        self.__phones.append(phone.text)
 
-                addrs = driver.find_elements_by_xpath(("//div[contains(@class, 'secondary-attributes')]/address"))
-                for addr in addrs:
-                    code = addr.text.split(" ")
-                    self.__addrs.append(addr[-1])
+                    addrs = div.find_elements_by_xpath((".//div[contains(@class, 'secondary-attributes')]/address"))
+                    for addr in addrs:
+                        code = addr.text.split(" ")
+                        self.__addrs.append(code[-1])
 
-                next_page = driver.find_elements_by_class_name("available-number pagination-links_anchor")
+                next_page = driver.find_elements_by_xpath(".//a[contains(@class, 'available-number pagination-links_anchor')]")
                 has_next = False
                 next_url = ""
                 for j in xrange(len(next_page)):
@@ -132,7 +134,7 @@ class Info_Spider(object):
                 else:
                     driver.get(next_url)
 
-                self.save_csv("yelp")
+        self.save_csv("yelp")
 
     def save_csv(self, name):
         # name new file with current data
