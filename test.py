@@ -52,24 +52,42 @@ class Info_Spider(object):
 
             for i in xrange(1, NUM_TO_COUNT/2 + 1):
                 shops = driver.find_elements_by_class_name("property_title")
-                for j in xrange(0, 2):
+                for j in xrange(len(shops)):
+                    if shops[j].text in self.__names:
+                        continue
+
                     self.__names.append(shops[j].text)
                     d_url = shops[j].get_attribute("href")
                     driver.get(d_url)
                     star = driver.find_elements_by_xpath("//img[contains(@class, 'sprite-rating_rr_fill rating_rr_fill')]")
-                    self.__stars.append(star[0].get_attribute("content"))
+                    if star:
+                        self.__stars.append(float(star[0].get_attribute("content")))
+                    else:
+                        self.__stars.append(-1)
 
                     price = driver.find_elements_by_xpath("//div[contains(@class, 'detail first price_rating separator')]")
-                    self.__money.append(price[0].text)
+                    if price:
+                        self.__money.append(price[0].text)
+                    else:
+                        self.__money.append("")
 
                     review = driver.find_elements_by_xpath("//div[contains(@class, 'rs rating')]/a")
-                    self.__reviews.append(review[0].get_attribute("content"))
+                    if review:
+                        self.__reviews.append(int(review[0].get_attribute("content")))
+                    else:
+                        self.__reviews.append(-1)
 
                     addr = driver.find_elements_by_xpath("//span[contains(@property, 'postalCode')]")
-                    self.__addrs.append(addr[0].text)
+                    if addr:
+                        self.__addrs.append(addr[0].text)
+                    else:
+                        self.__addrs.append("")
 
                     phone = driver.find_elements_by_xpath("//div[contains(@class, 'fl phoneNumber')]")
-                    self.__phones.append(phone[0].text)
+                    if phone:
+                        self.__phones.append(phone[0].text)
+                    else:
+                        self.__phones.append("")
 
                     driver.back()
                     shops = driver.find_elements_by_class_name("property_title")
@@ -104,27 +122,37 @@ class Info_Spider(object):
                         self.__names.append(name.text)
 
                     stars = div.find_elements_by_class_name("star-img")
-                    for star in stars:
-                        star_s = star.get_attribute("title").split(" ")
-                        self.__stars.append(star_s[0])
+                    if stars:
+                        star_s = stars[0].get_attribute("title").split(" ")
+                        self.__stars.append(float(star_s[0]))
+                    else:
+                        self.__stars.append(-1)
 
                     reviews = div.find_elements_by_xpath(".//span[contains(@class, 'review-count rating-qualifier')]")
-                    for review in reviews:
-                        review_s = review.text.split(" ")
-                        self.__reviews.append(review_s[0])
+                    if reviews:
+                        review_s = reviews[0].text.split(" ")
+                        self.__reviews.append(int(review_s[0]))
+                    else:
+                        self.__reviews.append(-1)
 
                     prices = div.find_elements_by_xpath(".//span[contains(@class, 'business-attribute price-range')]")
-                    for price in prices:
-                        self.__money.append(price.text)
+                    if prices:
+                        self.__money.append(prices[0].text)
+                    else:
+                        self.__money.append("")
 
                     phones = div.find_elements_by_class_name("biz-phone")
-                    for phone in phones:
-                        self.__phones.append(phone.text)
+                    if phones:
+                        self.__phones.append(phones[0].text)
+                    else:
+                        self.__phones.append("")
 
                     addrs = div.find_elements_by_xpath((".//div[contains(@class, 'secondary-attributes')]/address"))
-                    for addr in addrs:
-                        code = addr.text.split(" ")
+                    if addrs:
+                        code = addrs[0].text.split(" ")
                         self.__addrs.append(code[-1])
+                    else:
+                        self.__addrs.append("")
 
                 next_page = driver.find_elements_by_xpath(".//a[contains(@class, 'available-number pagination-links_anchor')]")
                 has_next = False
@@ -151,6 +179,7 @@ class Info_Spider(object):
         # name new file with current data
         csvfile = file(name + ".csv", 'wb')
         writer = csv.writer(csvfile)
+        writer.writerow(["shop name", "postal code", "phone number", "star", "price", "number of reviews"])
         data = []
         for i in range(len(self.__names)):
             line = (self.__names[i], self.__addrs[i], self.__phones[i],
