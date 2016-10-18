@@ -22,7 +22,7 @@ For more information, see the README.md .
 
 
 
-NUM_TO_COUNT = 10
+NUM_TO_COUNT = 100
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -46,12 +46,12 @@ class Info_Spider(object):
         for url in self.__start_url:
             driver.get(url)
 
-            for i in xrange(1, NUM_TO_COUNT/2 + 1):
+            for i in xrange(1, NUM_TO_COUNT):
                 shops = driver.find_elements_by_class_name("property_title")
                 for j in xrange(len(shops)):
                     if shops[j].text in self.__names:
                         continue
-                        
+
                     self.__names.append(shops[j].text)
                     d_url = shops[j].get_attribute("href")
                     driver.get(d_url)
@@ -168,7 +168,7 @@ class Info_Spider(object):
         # name new file with current data
         csvfile = file(name + ".csv", 'wb')
         writer = csv.writer(csvfile)
-        # writer.writerow(["shop name", "postal code", "phone number", "star", "price", "number of reviews"])
+        writer.writerow(["shop name", "postal code", "phone number", "star", "price", "number of reviews"])
         data = []
         for i in range(len(self.__names)):
             line = (self.__names[i], self.__addrs[i], self.__phones[i],
@@ -193,6 +193,7 @@ def main(args):
         spidey.yelp_crawl()
     else:
         spidey = Info_Spider(url_file)
+        spidey.advisor_crawl()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
