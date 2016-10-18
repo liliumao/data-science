@@ -19,7 +19,7 @@ def cal_missing_rate(csv_file):
                     m_data[i] += 1
 
         for i in xrange(6):
-            print m_data[i] / (float) (m_data[i] + len(data[i]))
+            print cols[i] + ": " + str(m_data[i] / (float) (m_data[i] + len(data[i])))
 
 
 def main(args):
