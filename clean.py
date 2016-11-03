@@ -5,10 +5,15 @@ import argparse
 
 def clean(csv_file):
     data = []
+    names = []
     with open(csv_file + ".csv", 'rb') as csvfile:
         cols = ["shop name", "postal code", "phone number", "star", "price", "number of reviews"]
         reader = csv.DictReader(csvfile)
         for row in reader:
+            if row[cols[0]] in names:
+                continue
+            names.append(row[cols[0]])
+
             if len(row[cols[1]]) == 10 or len(row[cols[1]]) == 9:
                 row[cols[1]] = row[cols[1]][:5]
             elif len(row[cols[1]]) != 5:
