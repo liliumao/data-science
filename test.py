@@ -23,7 +23,7 @@ For more information, see the README.md .
 
 
 
-NUM_TO_COUNT = 2
+NUM_TO_COUNT = 10
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -77,11 +77,17 @@ class Info_Spider(object):
                     else:
                         self.__reviews.append(-1)
 
-                    addr = driver.find_elements_by_xpath("//span[contains(@property, 'postalCode')]")
-                    if addr:
-                        self.__addrs.append(addr[0].text)
+                    postal = driver.find_elements_by_xpath("//span[contains(@property, 'postalCode')]")
+                    if postal:
+                        self.__addrs.append(postal[0].text)
                     else:
                         self.__addrs.append("")
+
+                    addr = driver.find_elements_by_xpath("//span[contains(@property, 'streetAddress')]")
+                    if addr:
+                        print addr[0].text
+                    else:
+                        print "no"
 
                     phone = driver.find_elements_by_xpath("//div[contains(@class, 'fl phoneNumber')]")
                     if phone:
@@ -105,7 +111,7 @@ class Info_Spider(object):
                 else:
                     driver.get(next_url)
 
-        self.save_csv("advisor")
+        # self.save_csv("advisor")
 
     def yelp_crawl(self):
         driver = webdriver.Chrome()
@@ -114,6 +120,7 @@ class Info_Spider(object):
             driver.get(url)
 
             for i in xrange(1, NUM_TO_COUNT + 1):
+                print i
                 divs = driver.find_elements_by_class_name("biz-listing-large")
                 for div in divs:
                     # shops = driver.find_elements_by_class_name("biz-name js-analytics-click")
@@ -149,8 +156,10 @@ class Info_Spider(object):
 
                     addrs = div.find_elements_by_xpath((".//div[contains(@class, 'secondary-attributes')]/address"))
                     if addrs:
-                        code = addrs[0].text.split(" ")
+                        addr = addrs[0].text.split('\n')
+                        code = addr[1].split(" ")
                         self.__addrs.append(code[-1])
+                        print addr[0]
                     else:
                         self.__addrs.append("")
 
@@ -173,7 +182,7 @@ class Info_Spider(object):
         print len(self.__stars)
         print len(self.__money)
         print len(self.__reviews)
-        self.save_csv("yelp")
+        # self.save_csv("yelp")
 
     def save_csv(self, name):
         # name new file with current data

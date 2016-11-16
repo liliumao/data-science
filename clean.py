@@ -9,7 +9,7 @@ def clean(csv_file):
     phones = []
     cnt = 1
     with open(csv_file + ".csv", 'rb') as csvfile:
-        cols = ["shop name", "postal code", "phone number", "star", "price", "number of reviews"]
+        cols = ["shop name", "postal code", "phone number", "star", "price", "number of reviews", "street address"]
         reader = csv.DictReader(csvfile)
         for row in reader:
 
@@ -53,7 +53,7 @@ def clean(csv_file):
 def save_csv(name, data):
     # name new file with current data
     csvfile = file(name + "_clean.csv", 'wb')
-    cols = ["ID", "shop name", "postal code", "phone number", "star", "price", "number of reviews"]
+    cols = ["ID", "shop name", "postal code", "phone number", "star", "price", "number of reviews", "street address"]
     writer = csv.DictWriter(csvfile, fieldnames=cols)
 
     writer.writeheader()

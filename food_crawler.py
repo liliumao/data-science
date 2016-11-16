@@ -36,8 +36,10 @@ class Info_Spider(object):
         self.__stars = []
         self.__money = []
         self.__names = []
-        self.__addrs = []
+        self.__postal_codes = []
         self.__phones = []
+        self.__addrs = []
+
 
         for line in open(filename):
             self.__start_url.append(line)
@@ -73,7 +75,13 @@ class Info_Spider(object):
                     else:
                         self.__reviews.append(-1)
 
-                    addr = driver.find_elements_by_xpath("//span[contains(@property, 'postalCode')]")
+                    postal = driver.find_elements_by_xpath("//span[contains(@property, 'postalCode')]")
+                    if postal:
+                        self.__postal_codes.append(postal[0].text)
+                    else:
+                        self.__postal_codes.append("")
+
+                    addr = driver.find_elements_by_xpath("//span[contains(@property, 'streetAddress')]")
                     if addr:
                         self.__addrs.append(addr[0].text)
                     else:
@@ -144,9 +152,12 @@ class Info_Spider(object):
 
                     addrs = div.find_elements_by_xpath((".//div[contains(@class, 'secondary-attributes')]/address"))
                     if addrs:
-                        code = addrs[0].text.split(" ")
-                        self.__addrs.append(code[-1])
+                        addr = addrs[0].text.split('\n')
+                        code = addr[1].split(" ")
+                        self.__postal_codes.append(code[-1])
+                        self.__addrs.append(addr[0])
                     else:
+                        self.__postal_codes.append("")
                         self.__addrs.append("")
 
                 next_page = driver.find_elements_by_xpath(".//a[contains(@class, 'available-number pagination-links_anchor')]")
@@ -168,11 +179,11 @@ class Info_Spider(object):
         # name new file with current data
         csvfile = file(name + ".csv", 'wb')
         writer = csv.writer(csvfile)
-        writer.writerow(["shop name", "postal code", "phone number", "star", "price", "number of reviews"])
+        writer.writerow(["shop name", "postal code", "phone number", "star", "price", "number of reviews", "street address"])
         data = []
         for i in range(len(self.__names)):
-            line = (self.__names[i], self.__addrs[i], self.__phones[i],
-                    self.__stars[i], self.__money[i], self.__reviews[i])
+            line = (self.__names[i], self.__postal_codes[i], self.__phones[i],
+                    self.__stars[i], self.__money[i], self.__reviews[i], self.__addrs[i])
             data.append(line)
 
         writer.writerows(data)
