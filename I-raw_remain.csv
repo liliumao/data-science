@@ -1,0 +1,151 @@
+_id,ltable_ID,rtable_ID,ltable_shop name,ltable_postal code,ltable_street address,ltable_phone number,rtable_shop name,rtable_postal code,rtable_street address,rtable_phone number,label
+23,21,2075,chosun galbee restaurant,90019,3330 w olympic blvd,3237343330,chosun galbee,90019,3330 w olympic blvd,3237343330,1
+25,22,2381,jitlada restaurant,90027,5233 1/2 w sunset blvd,3236679809,ocha classic restaurant,90027,5189 w sunset blvd,3236633901,-1
+32,30,2123,wokcano - downtown la,90017,800 w 7th st,2136232288,the counter downtown la,90017,725 w 7th st,2132287800,-1
+33,31,1644,marugame monzo,,"329 e. 1st , los angeles, california 90012",2133469762,marugame monzo,90012,329 e 1st st,2133469762,1
+46,43,2541,triple 8 china bar & grill,,800 w olympic blvd ste a120,2137473700,rainbow bar & grill,90069,9015 w sunset blvd,3102784232,-1
+65,53,1248,toi on sunset,90046,7505 1/2 w sunset blvd,3238748062,bossa nova on sunset,90046,7181 w sunset blvd,3234367999,-1
+69,54,2304,tsujita la,90025,2057 sawtelle blvd,3102310222,tsujita la artisan noodle annex,90025,2050 sawtelle blvd,3102310222,-1
+78,67,2143,cho oishi,90028,6801 hollywood blvd,3234640500,cho oishi,90028,6801 hollywood blvd,3234640500,1
+87,75,1816,hoy-ka thai noodle house,90028,5908 w sunset blvd,3234632979,hoy-ka thai noodles,90028,5908 sunset blvd,3236883558,1
+111,102,1372,sushi enya,90012,343 e 1st st,,sushi enya,90012,343 e 1st st,2136263692,1
+129,123,1710,sushi zo,90034,9824 national blvd,3108423977,sushi zo,90034,9824 national blvd,4242015576,1
+143,144,2255,shu - sushi house unico,90077,2932 1/2 beverly glen circle,3104742740,shu sushi house unico,90077,2932 1/2 beverly glen circle,3104742740,1
+217,210,2132,tawanna thai,90048,6236 wilshire blvd.,3239392450,tawanna thai,90048,6236 wilshire blvd,3239392450,1
+223,216,1504,red corner asia,90027,5267 hollywood blvd,3234666722,red corner asia,90027,5267 hollywood blvd,3234666722,1
+286,278,2108,hodori restaurant,90006,1001 s vermont ave ste 102,2133833554,a-won japanese restaurant,90006,913 s vermont ave,2133896764,-1
+294,292,1997,meizhou dongpo,,santa monica blvd,3107880120,meizhou dongpo restaurant,90067,10250 santa monica blvd,3107880120,1
+339,336,4489,formosa cafe,90046,7156 santa monica blvd,3238509050,vinadore studio & cafe,90046,8157 santa monica blvd,3237984628,-1
+379,394,1836,o dae san korean bbq restaurant,90006,2889 w olympic blvd,2133839800,beverly soon tofu restaurant,90006,2717 w olympic blvd,2133801113,-1
+382,394,2022,o dae san korean bbq restaurant,90006,2889 w olympic blvd,2133839800,bak kung korean bbq,90019,3700 w olympic blvd,3237349292,-1
+412,433,2361,jung won paik noodle house,90006,2716 w olympic blvd,2133870410,miari noodle house,90006,3224 w olympic blvd,3237350647,-1
+419,444,1877,thai town noodle,90027,5136 hollywood blvd,3236670934,pho thai town,90027,5136 hollywood blvd,3236670934,1
+425,467,2149,asahi ramen,90025,2027 sawtelle blvd,3104792231,asahi ramen,90025,2027 sawtelle blvd,3104792231,1
+427,470,2681,bistro ka japanese restaurant,,6600 topanga canyon blvd unit 2010a,8183401300,caprese restaurant,91311,9777 topanga canyon blvd 2,8187097054,-1
+476,550,3817,mogo's restaurant,91403,4454 van nuys blvd ste k,8187836646,la fogata mexican restaurant,91403,5142 van nuys blvd,8185019065,-1
+520,629,3179,ok chinese restaurant,91405,7400 van nuys blvd,8189885622,chit chat restaurant cafe lounge,91405,7115 van nuys blvd,8187862424,-1
+548,706,4098,the griddle cafe,90046,7916 w sunset blvd,3238740377,elderberries threefold cafe,90046,7564 w sunset blvd,3238510700,-1
+561,723,4052,the pie hole,90013,714 traction ave,2135370115,the pie hole,90013,714 traction ave,2135370115,1
+563,726,4539,getty center restaurant,90049,1200 getty center dr,3104406810,the restaurant at the getty center,90049,1200 getty center dr,3104406810,1
+583,751,2894,rainbow bar & grill,90069,9015 w sunset blvd,3102784232,obica mozzarella bar pizza e cucina,90069,8630 w sunset blvd,3103605983,-1
+598,776,678,johnny rockets hollywood & highland,90028,6801 hollywood blvd ste 325,,baja hollywood,90028,6801 hollywood blvd,3234640935,-1
+601,779,1304,wolfgang puck at hotel bel-air,90077,701 stone canyon road,3109091644,wolfgang puck at hotel bel-air,90077,701 stone canyon rd,3104721211,1
+656,861,1152,the standard downtown restaurant & lounge,90071,550 s flower st,2138928080,"the restaurant at the standard, downtown la",90071,550 s flower st,2138928080,1
+661,869,1039,the morrison,90039,3179 los feliz blvd,3236671839,the morrison,90039,3179 los feliz blvd,3236671839,1
+692,918,2312,la prime at the westin bonaventure hotel,90071,404 s figueroa st,2136124743,la prime,90071,404 s figueroa st,2136124743,1
+706,941,1168,fords filling station,90015,900 w olympic blvd,2137658630,ford's filling station,90015,900 west olympic blvd,2137658600,1
+721,957,2308,sage organic vegan,90026,1700 w sunset blvd,2139891718,flore vegan cuisine,90026,3818 w sunset blvd,3239530611,-1
+735,973,4075,larchmont bungalow,90004,107 n larchmont blvd,3234611528,le pain quotidien - larchmont,90004,113 n larchmont blvd,3234617701,-1
+741,984,4585,la cafe,90014,639 s spring st,2136123000,manuel cafe,90014,808 s spring st,,-1
+754,1002,1671,nick's coffee shop & deli,90035,8536 w pico blvd,3106523567,label's table deli,90035,9226 w pico blvd,3102760388,-1
+758,1004,3981,fratelli cafe,90046,7200 melrose ave,3239382233,fratelli cafe,90046,7200 melrose ave,3239382233,1
+760,1006,1269,orleans and york deli,90043,4454 w slauson ave,3232918800,orleans and york deli,90043,4454 w slauson ave,3232918800,1
+777,1043,1206,doughboys cafe,,8136 w 3rd st,3238521020,toast bakery cafe,90048,8221 w 3rd st,3236555018,-1
+778,1043,1247,doughboys cafe,,8136 w 3rd st,3238521020,cafe angelino,90048,8735 w 3rd st,3102461177,-1
+790,1063,995,grub,90038,911 seward st,3234613663,grub,90038,911 seward st,3234613663,1
+822,1133,1630,tender greens,90014,523 w 6th st,2138731890,tender greens,90014,"523 w 6th st, ste 505",2138731890,1
+853,1179,1146,spitz,90012,371 e 2nd st,2136130101,spitz - little tokyo,90012,371 e 2nd st,2136130101,1
+863,1196,1180,urban skillet,91601,5060 lankershim blvd,8185794000,urban skillet,91601,5060 lankershim blvd,8185794000,1
+866,1206,1728,casey's irish bar and grill,,613 south grand ave.,2136292353,casey's irish pub,90017,613 s grand ave,2136292353,1
+873,1215,1338,quality food & beverage,90048,8030 w 3rd st,3236585959,quality food & beverage,90048,8030 w 3rd st,3236585959,1
+895,1256,1771,the third stop,90048,8636 w 3rd st,3102733605,joan's on third,90048,8350 w 3rd st,3236552285,-1
+907,1268,4578,catalina bar & grill,90028,6725 w sunset blvd,3234662210,cafe bar,90028,6360 w sunset blvd,3234641524,-1
+936,1309,1251,burgerim,90038,5001 melrose ave,3238484848,burgerim,90038,5001 melrose ave,3238484848,1
+949,1334,610,billingsley's restaurant,90064,11326 w pico blvd,3104771426,rancho park gardens restaurant,90064,10460 w pico blvd,3108397750,-1
+980,1411,1802,modern eats,90039,2590 glendale blvd,3236651008,modern eats,90039,2590 glendale blvd,3236651008,1
+992,1425,3460,daily grill brentwood,90049,11677 san vicente blvd.,3104420044,gaucho grill,90049,11754 san vicente blvd,3104477898,-1
+995,1431,1383,redwood bar and grill,90012,316 w 2nd st,2136802600,redwood bar & grill,90012,316 w 2nd st,2136802600,1
+1019,1491,4420,59th & lex cafe,,10250 santa monica blvd,3107727189,santa monica restaurant & cafe,90025,12340 santa monica blvd,3102078888,-1
+1025,1508,142,comfort la,90021,1110 e. 7th st,2135370844,la reyna restaurant,90021,2000 e 7th st,2136249879,-1
+1040,1546,3817,corky's restaurant & bar,91403,5043 van nuys blvd,8187885110,la fogata mexican restaurant,91403,5142 van nuys blvd,8185019065,-1
+1043,1552,1235,sunset grill hollywood,90046,7439 w sunset blvd,3238515557,sunset grill hollywood,90046,7439 w sunset blvd,3238515557,1
+1047,1552,2183,sunset grill hollywood,90046,7439 w sunset blvd,3238515557,toi on sunset,90046,7505 1/2 w sunset blvd,3238748062,-1
+1073,1657,4459,cafe vogue,90048,100 north la cienega blvd,3106578778,black swan cafe,90048,440 n la cienega blvd,3109098459,-1
+1076,1662,4286,elaine's bakery & cafe,90049,11677 san vicente blvd ste 317,3104422233,market at m cafe,90049,11678 san vicente blvd,3102071122,-1
+1077,1672,1847,asian fusion,90035,1710 s robertson blvd,4242988247,asian fusion,90035,1710 s robertson blvd,4242988247,1
+1085,1678,62,el tepeyac,90033,812 n evergreen ave,3232678668,el tepeyac cafe,90033,812 n evergreen ave,3232681960,1
+1116,1706,90,pez cantina,90071,401 s grand ave,2132582280,pez cantina,90071,401 s grand ave,2132582280,1
+1154,1743,3843,melody's mexican kitchen,91335,6747 reseda blvd,8186099062,melody's fresh mexican kitchen,91335,6747 reseda blvd,8186099062,1
+1165,1753,221,los burritos inc,90028,6517 hollywood blvd,3234615814,los burritos,90028,6517 hollywood blvd,3234615814,1
+1166,1754,64,tere's mexican grill,90038,5870 melrose ave,8667968476,tere's mexican grill,90038,5870 melrose ave,3234689345,1
+1186,1774,3860,el patron,91356,5545 reseda blvd,8186433033,el patron,91356,5545 reseda blvd,8186433033,1
+1189,1776,445,rodeo mexican grill,90015,1721 w olympic blvd,2137385252,rodeo mexican grill,90026,1721 w sunset blvd,2134838311,1
+1194,1778,459,qdoba mexican grill,90017,655 s hope st,,qdoba mexican grill,90017,655 s hope st,2135720344,1
+1199,1782,504,tamara's tamales,90066,13352 w washington blvd,3103057714,tamara's tamales,90066,13352 washington blvd,3103057714,1
+1201,1785,505,las anitas,90012,26 olvera street,2136231153,las anitas restaurant,90012,26 olvera st,2136231153,1
+1204,1786,323,sky's gourmet tacos,,5408 w pico blvd,3239326253,tacos tamix,90006,2402 w pico blvd,,1
+1229,1803,131,nina's mexican food,90025,1651 sawtelle blvd,3104795081,nina's mexican food,90025,1651 sawtelle blvd,3104795081,1
+1239,1805,491,tacos el gavilan,,7070 w sunset blvd,,tacos como en el d.f. taco truck,90018,2431 w washington blvd,3109484714,-1
+1249,1805,3835,tacos el gavilan,,7070 w sunset blvd,,tacos & mariscos el parque,90247,1124 w redondo beach blvd,3105383000,-1
+1256,1815,355,teresitas restaurant,90063,3826 e 1st st,3232666045,la cocina restaurant l&f,90063,3425 e 1st st,3232627790,-1
+1263,1822,627,tacos clarita,90032,5024 huntington dr s,3232233844,la pasadita tacos,90032,5434 huntington dr s,,-1
+1277,1843,769,tacos los carnales,90011,4370 s central ave,3238461135,tacos don eve,90011,4109 s central ave,,-1
+1287,1853,310,el comal,90029,5465 santa monica blvd,3239621706,el unico pollo taquero,90029,4481 santa monica blvd,3239068429,-1
+1322,1902,3644,sandra's & lolita's tamales,90022,5390 whittier blvd,3237222961,lolita's tamales,90022,6050 whittier blvd,3237244222,-1
+1325,1906,167,ciro's restaurant,90033,705 n evergreen ave,3232695104,ciro's restaurant,90033,705 n evergreen ave,3232695104,1
+1326,1908,477,cemitas poblanas elvirita,90063,3010 e 1st st,3238810428,elvirita cemitas poblanas,90063,3010 e 1st st,3238810428,1
+1341,1932,3666,tortas mexico restaurant,91604,11040 ventura blvd,8187602571,tortas mexico,91604,11040 ventura blvd.,8187602571,1
+1351,1950,977,la fuente,90041,2256 colorado blvd,3232584303,la fuente rest bar & grill,90041,2256 colorado blvd,3232588394,1
+1367,1965,620,taco house,90013,340 s hill st,2136252700,ye olde taco house #1,90013,340 s hill st,2136252700,1
+1399,2005,48,tacos el compita,,4477 w pico blvd,,el grullense restaurant,90006,2274 w pico blvd,2134879540,-1
+1469,2068,145,juquila restaurant,90025,11619 santa monica blvd,3103121079,juquila restaurant,90025,11619 santa monica blvd,3103121079,1
+1501,2096,42,el atacor no 6,90026,1378 w sunset blvd,2134817579,el paisano,90026,1185 w sunset blvd,,-1
+1512,2104,436,rudy's mexican grill,90026,1263 w 2nd st,2134824890,rudy's mexican grill,90026,1263 w 2nd st,2134824890,1
+1526,2108,1531,tarascos mexican restaurant,90026,3319 w sunset blvd,3236693300,el cochinito restaurant,90026,3508 w sunset blvd,3236680737,-1
+1546,2129,533,tacos el tapatio 3,90016,5156 w washington blvd,,mariscos el gringo,90016,4209 w washington blvd,3237373977,-1
+1554,2136,112,taqueria tijuana,90003,241 w florence ave,3237501719,taqueria tijuana,90003,241 w florence ave,3237501719,1
+1555,2142,933,taqueria montes,90001,1911 e gage ave,3235822358,taqueria montes,90001,1911 gage ave,3235822358,1
+1577,2176,953,taco mexico,90026,1538 glendale blvd,2139890367,tacos mexico,90026,1538 glendale blvd,2134134823,1
+1582,2190,222,la barbacha,90033,2510 e cesar e chavez ave,3232641451,la chispa de oro,90033,2217 e cesar e chavez ave,3235260793,-1
+1585,2190,593,la barbacha,90033,2510 e cesar e chavez ave,3232641451,la lupita,90033,2211 e cesar e chavez ave,3232651456,-1
+1597,2207,909,tacos y burritos el texano,90033,2308 e 4th st,3235471831,tacos y burritos el texano,90033,2308 e 4th st,3235471831,1
+1605,2212,496,el kiosko mexican grill & events,90063,3534 e 1st st,3232663301,el mercado de los angeles,90063,3425 e 1st st,3232624507,-1
+1648,2279,847,beggies tacos,,16194 1/2 w sunset blvd,9499450670,last call tacos,90026,2939 1/2 w sunset blvd,3232182327,-1
+1652,2286,2337,picca,,9575 west pico blvd,3102770133,picca,90035,9575 w pico blvd,3102770133,1
+1654,2294,1490,yojie japanese fondue and sake bar,90015,501 w olympic blvd unit 102,2139888808,wolfgang puck bar & grill,90015,800 w olympic blvd,2137489700,-1
+1662,2298,2117,shibumi,90014,815 south hill st,2132657923,shibumi,90014,815 s hill st,2132657923,1
+1673,2313,2054,waba grill,90029,1134 n vermont ave,3236609222,waba grill,90029,726 n western ave,3239526581,-1
+1691,2341,2216,sushi q,90028,6660 w sunset blvd,3238560100,sugarfish by sushi nozawa,90028,6115 w sunset blvd,3233204800,-1
+1712,2382,1799,asakuma sushi delivery,90025,11769 santa monica blvd,3106591092,bad sushi,90025,11617 santa monica blvd,3104794910,-1
+1714,2391,2216,club sushi hollywood,90028,6374 w sunset blvd,3103725939,sugarfish by sushi nozawa,90028,6115 w sunset blvd,3233204800,-1
+1731,2441,2176,tsurumaru udon honpo,90013,333 s alameda st,2136250441,tsurumaru udon honpo,90013,333 s alameda st,2136250441,1
+1735,2452,3050,raffaello ristorante,90731,400 s pacific ave,3105140900,raffaello ristorante,90731,400 s pacific ave,3105140900,1
+1736,2453,1248,bossa nova,90046,7181 w sunset blvd,3234367999,bossa nova on sunset,90046,7181 w sunset blvd,3234367999,1
+1741,2457,2926,desano pizza bakery,90029,4969 santa monica blvd,8436374225,pizza hut,90029,4629 w santa monica blvd.,3236630400,-1
+1752,2468,2472,maggiano's - farmers market,90036,189 the grove dr,3239659665,maggiano's little italy,90036,189 the grove dr,3239659665,1
+1753,2469,2479,miceli's,90068,3655 cahuenga blvd w,3238513344,miceli's,90068,3655 cahuenga blvd w,3238513344,1
+1789,2504,3263,j trani's ristorante,90731,584 w 9th st,3108321220,j trani's ristorante,90731,584 w 9th st,3108321220,1
+1792,2507,2522,divino,90049,11714 barrington ct,3104720886,divino,90049,11714 barrington ct,3104720886,1
+1802,2517,2405,della terra,90036,7675 beverly blvd,3239337675,della terra,90036,7675 beverly blvd,3239337675,1
+1808,2524,2836,pit fire pizza co,91601,5211 lankershim blvd,8189802949,pitfire artisan pizza,91601,5211 lankershim blvd,8189802949,1
+1814,2531,2505,raffallo's pizza,,4708 fountain ave,3236608506,raffallo's pizza,90029,4708 fountain ave,3236608506,1
+1820,2537,2496,il piccolo verde,90049,140 s barrington pl,3104724939,il piccolo verde,90049,140 s barrington pl,3104724939,1
+1827,2542,2556,berri's pizza cafe,90048,8412 w 3rd st,3238520642,berri's cafe,90048,8412 w 3rd st,3238520642,1
+1833,2546,2528,vito's pizza,90069,846 n la cienega blvd,3106526859,vito's pizza,90069,846 n la cienega blvd,3106526859,1
+1847,2558,2984,pizza studio,90007,3584 s figueroa st,2137636123,blaze fast-fire'd pizza,90007,3335 s figueroa st,2132220298,-1
+1867,2580,3336,sorrento's pizza house,90732,2428 s western ave,3105475129,sorrento's restaurant,90732,2428 s western ave,3108322820,1
+1874,2585,1229,cafe verona,90036,201 s la brea ave,3239346188,cafe verona,90036,201 s la brea ave,3239346188,1
+1886,2596,2452,vinoteca farfalla,90027,1968 hillhurst avenue,3236618070,vinoteca farfalla,90027,1968 hillhurst ave,3236618070,1
+1905,2609,3979,melrose cafe,90038,5003 melrose ave,3234610077,cafe americano on melrose,90038,5770 melrose ave,2134074420,-1
+1953,2674,2996,asparagus pizza,90028,1809 n cahuenga blvd,3239623036,asparagus pizza,90028,1809 n cahuenga blvd,3239623036,1
+1955,2677,3190,domingo's italian grocery,91316,17548 ventura blvd,8189814466,domingo's italian deli,91316,17548 ventura blvd,4243890639,1
+1971,2694,720,nagila kosher pizza & salads,90035,9411 w pico blvd,3107880111,kosher pizza station,90035,8965 w pico blvd,3102768708,-1
+1973,2694,1543,nagila kosher pizza & salads,90035,9411 w pico blvd,3107880111,shanghai glatt kosher,90035,9401 w pico blvd,3105530998,-1
+1976,2694,2691,nagila kosher pizza & salads,90035,9411 w pico blvd,3107880111,brooklyn pizza,90035,9228 w pico blvd,3105509992,-1
+1999,2722,1122,mr pizza factory,90010,3881 wilshire blvd,2137380077,mr. pizza,90010,3881 wilshire blvd,2137380077,1
+2013,2741,2710,colombo's italian steak house,90041,1833 colorado blvd,3232549138,colombo's italian steakhouse & jazz club,90041,1833 colorado blvd,3232549138,1
+2030,2767,2696,king of new york pizzeria,,3281 wilshire blvd,2133893500,king of new york pizzeria pub,90005,3281 wilshire blvd,2133893500,1
+2037,2773,2842,big mama's and papa's pizzeria,90046,7353 w sunset blvd,3238518111,big mama's & papa's pizzeria,90046,7353 w sunset blvd,3238518111,1
+2085,2893,1546,baco mercat,,408 s. main street,2136877000,bäco mercat,90013,408 s main st,2136878808,1
+2109,2914,1389,the talpa restaurant,90064,11751 w pico blvd,3104783353,gulp restaurant & brew pub,90064,10928 w pico blvd,3104740007,-1
+2125,2930,1276,ilobasqueno restaurant,90038,5027 melrose ave,3234680119,ilobasqueno restaurant,90038,5027 melrose ave,3234680119,1
+2140,2934,1731,el cochinito restaurant,90026,3508 w sunset blvd,3236680737,sib song thai restaurant,90026,2202 w sunset blvd,2134136316,-1
+2141,2934,3367,el cochinito restaurant,90026,3508 w sunset blvd,3236680737,el cid restaurant,90029,4212 w sunset blvd,3236680318,-1
+2149,2941,1439,tropicalia brazilian grill,90027,1966 hillhurst ave,3236441798,tropicalia brazilian grill,90027,1966 hillhurst ave,3236441798,1
+2153,2949,1048,qusqo bistro & gallery,90025,11633 santa monica blvd,3103123800,nook bistro,90025,11628 santa monica blvd,3102075160,-1
+2159,2953,252,el buen gusto restaurants 4,90039,2829 fletcher dr,3239069796,el buen gusto restaurants,90039,2829 fletcher dr,3239069796,1
+2162,2956,3417,pollos el brasero,90006,2281 w pico blvd,2133816060,el baron,90006,2757 w pico blvd,3237345772,-1
+2174,2961,310,el nuevo san salvador,90029,5230 santa monica blvd,3236651772,el unico pollo taquero,90029,4481 santa monica blvd,3239068429,-1
+2270,3021,4271,peet's coffe & tee,90024,1154 westwood blvd.,3104871970,peet's coffee,90024,1154 westwood blvd,3109548191,1
+2279,3032,4026,watts coffee house,,1827 e 103rd st,3232494343,primera taza coffee house,90033,1850 1/2 e 1st st,3237803923,-1
+2293,3045,4372,normandie pate,90016,3022 s cochran ave,3239395528,normandie bakery,90016,3022 s cochran ave,3239395528,1

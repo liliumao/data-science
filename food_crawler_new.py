@@ -182,9 +182,9 @@ class Info_Spider(object):
 
     def save_csv(self, name):
         # name new file with current data
-        csvfile = file(name + ".csv", 'a')
+        csvfile = file(name + ".csv", 'wb')
         writer = csv.writer(csvfile)
-        # writer.writerow(["shop name", "postal code", "phone number", "star", "price", "number of reviews", "street address"])
+        writer.writerow(["shop name", "postal code", "phone number", "star", "price", "number of reviews", "street address"])
         data = []
         for i in range(len(self.__names)):
             line = (self.__names[i], self.__postal_codes[i], self.__phones[i],
